@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Chapter 10 Practice</title>
+	<style>
+		body {
+			background-image: url("office.jpg");
+			background-size: cover;
+		}
+
+		h2 {
+			font-size: 2.5em;
+			margin-top: 40px;
+			font-family: "Arial Black", sans-serif;
+			color: red;
+			text-shadow: black 2px 2px 5px;
+		}
+	</style>
+</head>
+<body>
+	<h2>Today's Meeting Attendance</h2>
+	<h3 id="today"></h3>
+	<div id="attendance"></div>
+	<h3>This person is on coffee duty tomorrow:</h3>
+	<h3 id="coffee"></h3>
+
+	<script>
+		// Variable consisting of a new date object
+		let todaysDate = new Date();
+
+		// Update todaysDate to a date string in local format
+		todaysDate =  todaysDate.toLocaleDateString();
+
+		// Write the value of todaysDate to the document
+		document.getElementById("today").textContent = todaysDate;
+	</script>
+</body>
+</html>
